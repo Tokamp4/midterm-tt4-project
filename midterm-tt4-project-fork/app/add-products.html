@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Sidebar & Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">My Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="add-products.html">Add Product</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Form Section -->
+    <div class="container mt-4">
+        <h2>Add a New Product</h2>
+        <form id="addProductForm">
+            <div class="mb-3">
+                <label for="productPhoto" class="form-label">Product Photo</label>
+                <input type="file" class="form-control" id="productPhoto" required>
+            </div>
+            <div class="mb-3">
+                <label for="productTitle" class="form-label">Title</label>
+                <input type="text" class="form-control" id="productTitle" required>
+            </div>
+            <div class="mb-3">
+                <label for="productDescription" class="form-label">Description</label>
+                <textarea class="form-control" id="productDescription" maxlength="100" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="productPrice" class="form-label">Price ($)</label>
+                <input type="number" class="form-control" id="productPrice" step="0.01" min="0" required>
+            </div>
+            <div class="mb-3">
+                <label for="productQuantity" class="form-label">Quantity</label>
+                <input type="number" class="form-control" id="productQuantity" min="1" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Product</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("addProductForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Product added successfully!");
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
