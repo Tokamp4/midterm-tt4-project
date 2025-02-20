@@ -5,7 +5,9 @@ import chair from "./assets/images/chair.jpg";
 
 document.addEventListener("DOMContentLoaded", () => {
     const productsContainer = document.getElementById('products');
-
+///ioj i
+    ///jjj
+    ///fff
     const products = [
         { 
             name: 'Chair 1', 
